@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekonomi - Portal Berita Sekolah</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="container">
+        <span id="jam">Memuat jam...</span>
+        <span>|</span>
+        <a href="login.html">Login Admin</a>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container navbar-content">
+        <a href="index.html" class="logo" style="text-decoration: none">
+          <span class="logo-icon">📰</span>
+          <span class="logo-text">PortalBerita<strong>.id</strong></span>
+        </a>
+
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="nasional.html">Nasional</a></li>
+          <li><a href="teknologi.html">Teknologi</a></li>
+          <li><a href="olahraga.html">Olahraga</a></li>
+          <li><a href="hiburan.html">Hiburan</a></li>
+          <li><a href="ekonomi.html" class="active">Ekonomi</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HEADLINE KATEGORI -->
+    <div class="container">
+      <h1 class="section-title" style="margin-top: 30px">Berita Ekonomi</h1>
+
+      <div class="berita-grid">
+        <!-- Berita 1 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600" alt="Saham" />
+          <div class="card-body">
+            <span class="badge-merah">Ekonomi</span>
+            <h3><a href="#">IHSG Menguat Pagi Ini, Sektor Perbankan Jadi Pendorong</a></h3>
+            <p>Indeks Harga Saham Gabungan (IHSG) dibuka naik pada perdagangan pagi ini, didorong oleh kinerja saham perbankan.</p>
+          </div>
+        </article>
+
+        <!-- Berita 2 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600" alt="Uang" />
+          <div class="card-body">
+            <span class="badge-merah">Ekonomi</span>
+            <h3><a href="#">Harga Beras Naik, Pemerintah Siapkan Operasi Pasar</a></h3>
+            <p>Kenaikan harga beras di beberapa daerah membuat pemerintah turun tangan untuk menjaga stabilitas pangan.</p>
+          </div>
+        </article>
+
+        <!-- Berita 3 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600" alt="Bisnis" />
+          <div class="card-body">
+            <span class="badge-merah">Ekonomi</span>
+            <h3><a href="#">UMKM Digital Tumbuh Pesat di Kuartal Ini</a></h3>
+            <p>Transformasi digital mendorong pertumbuhan UMKM di Indonesia, terutama di sektor kuliner dan fashion.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 PortalBerita.id. Dibuat oleh [Nama Kamu].</p>
+      </div>
+    </footer>
+
+    <script>
+      function updateJam() {
+        const now = new Date();
+        document.getElementById("jam").textContent = now.toLocaleTimeString("id-ID");
+      }
+      setInterval(updateJam, 1000);
+      updateJam();
+    </script>
+  </body>
+</html>

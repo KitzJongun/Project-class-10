@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Berita Sekolah</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="container">
+        <span id="jam">Memuat jam...</span>
+        <span>|</span>
+        <span>Selamat Datang di PortalBerita.id</span>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container navbar-content">
+        <a href="#" class="logo" style="text-decoration: none" onclick="gantiHalaman('home')">
+          <span class="logo-icon">📰</span>
+          <span class="logo-text">PortalBerita<strong>.id</strong></span>
+        </a>
+        <ul class="menu">
+          <li><a href="#" onclick="gantiHalaman('home')" id="menu-home" class="active">Home</a></li>
+          <li><a href="#" onclick="gantiHalaman('nasional')" id="menu-nasional">Nasional</a></li>
+          <li><a href="#" onclick="gantiHalaman('teknologi')" id="menu-teknologi">Teknologi</a></li>
+          <li><a href="#" onclick="gantiHalaman('olahraga')" id="menu-olahraga">Olahraga</a></li>
+          <li><a href="#" onclick="gantiHalaman('hiburan')" id="menu-hiburan">Hiburan</a></li>
+          <li><a href="#" onclick="gantiHalaman('ekonomi')" id="menu-ekonomi">Ekonomi</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- KONTEN UTAMA (Isinya berubah sesuai menu) -->
+    <div class="container">
+      <div class="layout-utama">
+        <!-- KOLOM KIRI (Berita) -->
+        <div id="konten-berita">
+          <!-- Konten akan diisi otomatis oleh JavaScript -->
+        </div>
+
+        <!-- KOLOM KANAN (Sidebar) -->
+        <aside class="sidebar">
+          <h3>TERPOPULER</h3>
+          <div class="sidebar-item">
+            <span class="nomor">01</span>
+            <div><a href="#">Hasil FP2 Moto3 Qatar: Ega Positif 18</a><span class="kategori-tag">Olahraga</span></div>
+          </div>
+          <div class="sidebar-item">
+            <span class="nomor">02</span>
+            <div><a href="#">Hasil Liga Voli Korea: Megawati 18 Poin</a><span class="kategori-tag">Olahraga</span></div>
+          </div>
+          <div class="sidebar-item">
+            <span class="nomor">03</span>
+            <div><a href="#">Sulit Terima Partai Koalisi, Netanyahu</a><span class="kategori-tag">Internasional</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 PortalBerita.id. Dibuat oleh [Nama Kamu].</p>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT (Buat Ganti Konten) -->
+    <script>
+      // DATA BERITA (Kamu tinggal edit di sini)
+      const dataBerita = {
+        home: {
+          headline: {
+            title: "KDM Soroti Kasus Jari Karyawati di Cikarang Putus Terjepit Mesin",
+            desc: "Gubernur Jawa Barat Dedi Mulyadi menyoroti insiden kerja yang menyebabkan jari seorang karyawati putus.",
+            img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800",
+            badge: "TERKINI",
+          },
+          cards: [
+            { title: "Cara Membuat Website Pertamamu dengan HTML", desc: "HTML adalah bahasa dasar untuk membuat website.", img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600", badge: "Teknologi" },
+            { title: "Tips Memilih Warna Website yang Enak Dilihat", desc: "Warna yang tepat bisa bikin website lebih profesional.", img: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600", badge: "Desain" },
+            { title: "Panduan Lengkap CSS untuk Desain Web", desc: "Belajar CSS dari dasar hingga bisa bikin layout rapi.", img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600", badge: "Tutorial" },
+          ],
+        },
+        nasional: {
+          headline: {
+            title: "Pemerintah Resmikan Infrastruktur Baru di Ibu Kota",
+            desc: "Pembangunan infrastruktur strategis nasional akhirnya rampung dan siap digunakan.",
+            img: "https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=800",
+            badge: "NASIONAL",
+          },
+          cards: [
+            { title: "DPR Sahkan RUU Perlindungan Data Pribadi", desc: "RUU PDP resmi disahkan dalam rapat paripurna hari ini.", img: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600", badge: "Nasional" },
+            { title: "BMKG Peringatkan Cuaca Ekstrem", desc: "Masyarakat diminta waspada terhadap potensi hujan lebat.", img: "https://images.unsplash.com/photo-1575320181282-9afab399332c?w=600", badge: "Nasional" },
+            { title: "Kunjungan Presiden ke Daerah Tertinggal", desc: "Presiden meninjau langsung pembangunan di daerah terpencil.", img: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600", badge: "Nasional" },
+          ],
+        },
+        teknologi: {
+          headline: {
+            title: "Kecerdasan Buatan (AI) Semakin Canggih, Ini Dampaknya",
+            desc: "Perkembangan AI yang pesat mengubah cara kerja manusia di berbagai sektor.",
+            img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800",
+            badge: "TEKNOLOGI",
+          },
+          cards: [
+            { title: "Rilis Smartphone Terbaru dengan Kamera 200MP", desc: "Pabrikan meluncurkan perangkat flagship dengan kamera pro.", img: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600", badge: "Teknologi" },
+            { title: "Ancaman Serangan Cyber Meningkat", desc: "Pakar mengingatkan pentingnya menjaga data pribadi.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600", badge: "Teknologi" },
+            { title: "Startup Lokal Raih Pendanaan Jutaan Dolar", desc: "Startup asal Indonesia berhasil menarik investor asing.", img: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600", badge: "Teknologi" },
+          ],
+        },
+        olahraga: {
+          headline: {
+            title: "Timnas Indonesia Menang Dramatis di Menit Akhir",
+            desc: "Gol kemenangan di menit 90+3 membuat Indonesia meraih tiga poin penuh.",
+            img: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800",
+            badge: "OLAHRAGA",
+          },
+          cards: [
+            { title: "NBA: Lakers Bungkam Celtics di Laga Sengit", desc: "Pertandingan klasik tersaji seru dengan kemenangan tipis.", img: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600", badge: "Olahraga" },
+            { title: "Atlet Indonesia Raih Medali Emas di Asian Games", desc: "Prestasi membanggakan kembali ditorehkan atlet tanah air.", img: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600", badge: "Olahraga" },
+            { title: "Pebulu Tangkis Indonesia Melaju ke Final", desc: "Tunggal putra Indonesia berhasil mengalahkan unggulan pertama.", img: "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=600", badge: "Olahraga" },
+          ],
+        },
+        hiburan: {
+          headline: {
+            title: "Film Indonesia Tembus 1 Juta Penonton di Bioskop",
+            desc: "Film drama terbaru karya sineas lokal berhasil memikat hati penonton.",
+            img: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800",
+            badge: "HIBURAN",
+          },
+          cards: [
+            {
+              title: "Konser Musisi Internasional Sukses Digelar di Jakarta",
+              desc: "Ribuan penonton memadati stadion untuk menyaksikan penampilan spektakuler.",
+              img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600",
+              badge: "Hiburan",
+            },
+            { title: "Serial Populer Kembali dengan Season Terbaru", desc: "Penggemar setia dibuat antusias dengan rilisnya musim baru.", img: "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=600", badge: "Hiburan" },
+            { title: "Aktor Papan Atas Raih Penghargaan Bergengsi", desc: "Penghargaan tahunan kembali digelar dengan meriah.", img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600", badge: "Hiburan" },
+          ],
+        },
+        ekonomi: {
+          headline: {
+            title: "Transmart Full Day Sale Datang Lagi Besok, Diskon 50% + 20%",
+            desc: "Banyak promo menarik dan potongan harga di Transmart Full Day Sale hari ini.",
+            img: "https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?w=800",
+            badge: "EKONOMI",
+          },
+          cards: [
+            {
+              title: "IHSG Menguat Pagi Ini, Sektor Perbankan Jadi Pendorong",
+              desc: "Indeks Harga Saham Gabungan dibuka naik pada perdagangan pagi ini.",
+              img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600",
+              badge: "Ekonomi",
+            },
+            { title: "Harga Beras Naik, Pemerintah Siapkan Operasi Pasar", desc: "Kenaikan harga beras membuat pemerintah turun tangan.", img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600", badge: "Ekonomi" },
+            { title: "UMKM Digital Tumbuh Pesat di Kuartal Ini", desc: "Transformasi digital mendorong pertumbuhan UMKM.", img: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600", badge: "Ekonomi" },
+          ],
+        },
+      };
+
+      // FUNGSI UNTUK MENGGANTI KONTEN
+      function gantiHalaman(kategori) {
+        // 1. Ganti class active di menu
+        document.querySelectorAll(".menu a").forEach((link) => link.classList.remove("active"));
+        document.getElementById(`menu-${kategori}`).classList.add("active");
+
+        // 2. Ambil data berita sesuai kategori
+        const data = dataBerita[kategori];
+
+        // 3. Susun HTML baru
+        let html = `
+        <!-- HEADLINE -->
+        <div class="headline-main">
+          <span class="badge-merah">${data.headline.badge}</span>
+          <h1>${data.headline.title}</h1>
+          <p class="excerpt">${data.headline.desc}</p>
+          <img src="${data.headline.img}" alt="Headline">
+        </div>
+        <h2 class="section-title" style="margin-top:30px;">Berita Lainnya</h2>
+        <div class="berita-grid">
+      `;
+
+        // 4. Loop kartu berita
+        data.cards.forEach((card) => {
+          html += `
+          <article class="card">
+            <img src="${card.img}" alt="">
+            <div class="card-body">
+              <span class="badge-merah">${card.badge}</span>
+              <h3><a href="#">${card.title}</a></h3>
+              <p>${card.desc}</p>
+              <a href="#" class="read-more">Baca Selengkapnya &rarr;</a>
+            </div>
+          </article>
+        `;
+        });
+
+        html += `</div>`; // Tutup berita-grid
+
+        // 5. Tampilkan ke layar
+        document.getElementById("konten-berita").innerHTML = html;
+      }
+
+      // Jalankan Home pertama kali
+      gantiHalaman("home");
+
+      // Jam Digital
+      function updateJam() {
+        const now = new Date();
+        document.getElementById("jam").textContent = now.toLocaleTimeString("id-ID");
+      }
+      setInterval(updateJam, 1000);
+      updateJam();
+    </script>
+  </body>
+</html>
